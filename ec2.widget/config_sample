@@ -1,4 +1,5 @@
 NAME=JohnDoe
-OWNER=jdddohn.doeddd
+OWNER=john.doe
+REGION=eu-west-1
 KEY_PATH=/home/.ssh/johndoe.pem
 USER=ec2-user
