@@ -1,7 +1,8 @@
 # ec2-Übersicht-widget
 EC2 Übersicht Widget, allows to start/stop/terminate/shell EC2 instances
 
-## Prerequisite
+## Prerequisite
+
 Install and configure [AWS Command Line Interface](https://aws.amazon.com/cli/)
 
 ## Configuration
