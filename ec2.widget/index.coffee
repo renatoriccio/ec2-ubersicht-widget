@@ -12,7 +12,7 @@ if [ $? -ne 0 ]; then
   exit;
 fi;
 
-REGIONS_LIST=`echo \"$REGIONS\" | grep 'eu\\|ap'`;
+REGIONS_LIST=`echo \"$REGIONS\" | grep $REGION`;
 
 while read region; \
 do
