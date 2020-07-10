@@ -5,14 +5,14 @@ source ec2.widget/config
 obj1=[];
 obj2=[];
 
-REGIONS=$( /usr/local/bin/aws ec2 describe-regions --cli-connect-timeout 3 --output text 2>/dev/null );
+REGIONS=$( /usr/local/bin/aws ec2 describe-regions --cli-connect-timeout 3 --output text --query 'Regions[].{Name:RegionName}' 2>/dev/null );
 
 if [ $? -ne 0 ]; then
   echo '[{\"error\": \"Unable to reach AWS API\"}]';
   exit;
 fi;
 
-REGIONS_LIST=`echo \"$REGIONS\" | cut -f3 | grep $REGION`;
+REGIONS_LIST=`echo \"$REGIONS\" | grep $REGION`;
 
 while read region; \
 do
